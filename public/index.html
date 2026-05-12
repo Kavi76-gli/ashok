@@ -104,11 +104,10 @@ color:#aaa;
 
 <p>Get fastest Kalyan Matka Results & Charts</p>
 
-<a class="btn"
-   href="Kalyan999 (1).apk"
-   download
-   onclick="fbq('track','Subscribe')">
- Download APK
+
+
+<a class="btn" href="Kalyan999 (1).apk" id="downloadBtn">
+Download APK
 </a>
 
 <div class="features">
@@ -123,6 +122,18 @@ color:#aaa;
 <div class="footer">
 © 2026 Kalyan 999 Matka. All Rights Reserved
 </div>
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function(e){
+    e.preventDefault(); // stops double trigger
 
+    // fire event ONCE
+    fbq('track', 'Lead');
+
+    // delay download slightly (prevents double firing)
+    setTimeout(function(){
+        window.location.href = "Kalyan999 (1).apk";
+    }, 300);
+});
+</script>
 </body>
 </html>
